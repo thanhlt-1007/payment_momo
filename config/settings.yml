@@ -1,0 +1,4 @@
+momo:
+  payment_url:
+    production: "https://payment.momo.vn"
+    test: "https://test-payment.momo.vn"
