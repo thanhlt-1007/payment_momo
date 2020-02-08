@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Product List</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "products/product", collection: @products %>
+    </tbody>
+  </table>
+</div>
