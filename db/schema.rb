@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_08_112153) do
+ActiveRecord::Schema.define(version: 2020_02_08_133757) do
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "price"
+    t.string "momo_order_id"
+    t.string "momo_request_id"
+    t.string "momo_order_type"
+    t.string "momo_pay_type"
+    t.string "momo_trans_id"
+    t.datetime "momo_response_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_orders_on_product_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
