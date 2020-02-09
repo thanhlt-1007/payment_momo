@@ -1,7 +1,7 @@
-class Momo::SignatureService < Momo::ApplicationService
+class Momo::RequestSignatureService < Momo::ApplicationService
   def perform
     digest = OpenSSL::Digest.new("sha256")
-    @signature ||= OpenSSL::HMAC.hexdigest(digest, secret_key, raw_signature)
+    OpenSSL::HMAC.hexdigest(digest, secret_key, raw_signature)
   end
 
   private

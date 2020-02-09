@@ -40,6 +40,6 @@ class Momo::SendRequestService < Momo::ApplicationService
   end
 
   def signature
-    @signature ||= Momo::SignatureService.new(order).perform 
+    @signature ||= Momo::RequestSignatureService.new(order).perform 
   end
 end
