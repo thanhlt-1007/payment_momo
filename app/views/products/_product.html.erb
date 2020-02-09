@@ -4,7 +4,7 @@
   <td><%= product.price %> VND</td>
   <td>
     <% if product.order %>
-      <%= link_to "#",
+      <%= link_to order_path(product.order),
         class: "btn btn-default btn-sm", style: "width: 150px;" do %>
         <span class="glyphicon glyphicon-ok"></span> View Order
       <% end %>

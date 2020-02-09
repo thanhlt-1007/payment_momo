@@ -10,9 +10,9 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :momo_request_id
 
       # update data when receive MoMo respone
+      t.string :momo_trans_id
       t.string :momo_order_type
       t.string :momo_pay_type
-      t.string :momo_trans_id
       t.datetime :momo_response_time
 
       t.timestamps

@@ -65,7 +65,7 @@ class Momo::PaymentsController < ApplicationController
       update_service.perform
 
       flash[:success] = "Payment success"
-      redirect_to root_url # order_url(@order)
+      redirect_to order_url(@order)
     else
       @order.destroy
 

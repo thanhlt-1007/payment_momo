@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Order #<%= @order.id %></h2>
+
+  <table class="table">
+    <tr>
+      <th>Product</th>
+      <td><%= @product.name %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @product.price %></td>
+    </tr>
+    <tr>
+      <th>MoMo Order ID</th>
+      <td><%= @order.momo_order_id %></td>
+    </tr>
+    <tr>
+      <th>MoMo Request ID</th>
+      <td><%= @order.momo_request_id %></td>
+    </tr>
+    <tr>
+      <th>MoMo Trans ID</th>
+      <td><%= @order.momo_trans_id %></td>
+    </tr>
+    <tr>
+      <th>MoMo Order Type</th>
+      <td><%= @order.momo_order_type %></td>
+    </tr>
+    <tr>
+      <th>MoMo Pay Type</th>
+      <td><%= @order.momo_pay_type %></td>
+    </tr>
+    <tr>
+      <th>Paid at</th>
+      <td><%= I18n.l @order.momo_response_time, format: :long %></td>
+    </tr>
+  </table>
+</div>
